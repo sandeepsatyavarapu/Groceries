@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Review and Rating</title>
+  <!-- Bootstrap CSS link -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+
+    .review-container {
+      max-width: 600px;
+      margin: auto;
+      padding: 20px;
+      background-color: #ffffff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      margin-top: 50px;
+    }
+
+    .rating-container {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .rating-stars label {
+      cursor: pointer;
+    }
+
+    .rating-stars input {
+      display: none;
+    }
+
+    .rating-stars span {
+      font-size: 24px;
+      color: #ffc107;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .rating-stars input:checked ~ span {
+      transform: scale(1.2);
+    }
+
+    .user-review {
+      margin-bottom: 20px;
+    }
+
+    .submit-btn {
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .submit-btn:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="review-container">
+    <h2>Leave a Review</h2>
+
+    <div class="rating-container">
+      <label class="mr-2">Your Rating:</label>
+      <div class="rating-stars">
+        <input type="radio" name="rating" id="star5" value="5">
+        <span>★</span>
+        <input type="radio" name="rating" id="star4" value="4">
+        <span>★</span>
+        <input type="radio" name="rating" id="star3" value="3">
+        <span>★</span>
+        <input type="radio" name="rating" id="star2" value="2">
+        <span>★</span>
+        <input type="radio" name="rating" id="star1" value="1">
+        <span>★</span>
+      </div>
+    </div>
+
+    <div class="form-group user-review">
+      <label for="review">Your Review:</label>
+      <textarea class="form-control" id="review" rows="4"></textarea>
+    </div>
+
+    <button class="submit-btn">Submit Review</button>
+  </div>
+
+  <!-- Bootstrap JS and Popper.js scripts (required for Bootstrap) -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grocery Shopping</title>
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+
+    .review-container {
+      max-width: 600px;
+      margin: auto;
+      padding: 20px;
+      background-color: #ffffff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      margin-top: 50px;
+    }
+
+    .rating-container {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .rating-stars label {
+      cursor: pointer;
+    }
+
+    .rating-stars input {
+      display: none;
+    }
+
+    .rating-stars span {
+      font-size: 24px;
+      color: #ffc107;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .rating-stars input:checked ~ span {
+      transform: scale(1.2);
+    }
+
+    .user-review {
+      margin-bottom: 20px;
+    }
+
+    .submit-btn {
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .submit-btn:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+    <div style="margin-left:1150px;">
+        <a href="Login.html"><button type="button" class="btn btn-primary">Login</button></a>
+        <a href="signup.html"><button type="button" class="btn btn-primary">Signup</button></a>
+        <a href="Organic%20foods.html"><button type="button" class="btn btn-primary">View Details</button></a>
+        <a href="https://www.google.com/"><button type="button" class="btn btn-primary">Logout</button></a>
+       </div>
+     <nav class="navbar-inverse"  style="margin-top:30px;top:0; z-index:1000px">
+            <div class="nav-bar header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mynavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand " href="#">  <img src=shopping-basket.png alt="" width="30" height="24"></a>
+            </div>
+            <div class="navbar-collapse collapse" id="mynavbar">
+                <ul class="nav navbar-nav ">
+                     <li><a href="Home.html">Home</a></li>
+                    <li><a href="cart.html">Fruits</a></li>
+                    <li><a href="Vegetables.html">Vegetables</a></li>
+                     <li><a href="millets.html">Millets</a></li>
+                       <li><a href="seeds.html">Seeds</a></li>
+                   <li><a href="nuts.html">Nuts</a></li>
+                    <li><a href="Non-veg.html">Non-veg</a></li>
+                    <li><a href="Bank%20Offers.html">Offers</a></li>
+                    <li><a href="Review.html">Review</a></li>
+                    <li><a href="Services.html">Services</a></li>
+                     <li><a href="contactus.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+
+  <div class="review-container">
+    <h2>Leave a Review</h2>
+
+    <div class="rating-container">
+      <label class="mr-2">Your Rating:</label>
+      <div class="rating-stars">
+        <input type="radio" name="rating" id="star5" value="5">
+        <span>★</span>
+        <input type="radio" name="rating" id="star4" value="4">
+        <span>★</span>
+        <input type="radio" name="rating" id="star3" value="3">
+        <span>★</span>
+        <input type="radio" name="rating" id="star2" value="2">
+        <span>★</span>
+        <input type="radio" name="rating" id="star1" value="1">
+        <span>★</span>
+      </div>
+    </div>
+
+    <div class="form-group user-review">
+      <label for="review">Your Review:</label>
+      <textarea class="form-control" id="review" rows="4"></textarea>
+    </div>
+
+    <button class="submit-btn">Submit Review</button>
+  </div>
+</body>
+</html>
